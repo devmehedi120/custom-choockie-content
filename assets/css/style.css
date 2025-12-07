@@ -1,0 +1,142 @@
+.ccp-popup {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    top: 50%;
+    left: 50%;
+    border-radius: 0;
+    transform: translate(-50% ,-50%);
+}
+/* 
+.ccp-bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+}
+.ccp-bottom-left {
+    bottom: 20px;
+    left: 20px;
+    right: auto;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.ccp-bottom-right {
+    bottom: 20px;
+    right: 20px;
+    left: auto;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.ccp-top {
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    border-top: none;
+    border-bottom: 3px solid #007cba;
+} */
+
+.ccp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: #ffff;
+    padding: 40px 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;;
+}
+
+.ccp-message {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2c3338;
+}
+
+.ccp-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+.ccp-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.ccp-accept {
+    background: #007cba;
+    color: #ffffff;
+}
+
+.ccp-accept:hover {
+    background: #005a87;
+}
+
+.ccp-decline {
+    background: #f0f0f0;
+    color: #2c3338;
+    border: 1px solid #cccccc;
+}
+
+.ccp-decline:hover {
+    background: #e0e0e0;
+}
+
+.ccp-terms {
+    margin-top: 5px;
+}
+
+.ccp-terms-link {
+    font-size: 12px;
+    color: #007cba;
+    text-decoration: none;
+}
+
+.ccp-terms-link:hover {
+    text-decoration: underline;
+    color: #005a87;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .ccp-popup {
+        padding: 15px;
+    }
+    
+    .ccp-bottom-left,
+    .ccp-bottom-right {
+        left: 15px;
+        right: 15px;
+        max-width: none;
+        bottom: 15px;
+    }
+    
+    .ccp-buttons {
+        flex-direction: column;
+    }
+    
+    .ccp-button {
+        width: 100%;
+        text-align: center;
+    }
+}
