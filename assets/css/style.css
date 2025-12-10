@@ -10,38 +10,11 @@
     left: 50%;
     border-radius: 0;
     transform: translate(-50% ,-50%);
+    -webkit-transform: translate(-50% ,-50%);
+    -moz-transform: translate(-50% ,-50%);
+    -ms-transform: translate(-50% ,-50%);
+    -o-transform: translate(-50% ,-50%);
 }
-/* 
-.ccp-bottom {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: 0;
-}
-.ccp-bottom-left {
-    bottom: 20px;
-    left: 20px;
-    right: auto;
-    border-radius: 8px;
-    max-width: 400px;
-}
-
-.ccp-bottom-right {
-    bottom: 20px;
-    right: 20px;
-    left: auto;
-    border-radius: 8px;
-    max-width: 400px;
-}
-
-.ccp-top {
-    top: 0;
-    left: 0;
-    right: 0;
-    border-radius: 0;
-    border-top: none;
-    border-bottom: 3px solid #007cba;
-} */
 
 .ccp-content {
     display: flex;
@@ -53,9 +26,10 @@
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    max-width: 500px;;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
 .ccp-message {
     margin: 0;
     font-size: 14px;
@@ -68,7 +42,8 @@
     gap: 10px;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 .ccp-button {
     padding: 8px 20px;
@@ -84,22 +59,33 @@
 }
 
 .ccp-accept {
-    background: #007cba;
+    background: #f59733;
     color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     transition: all 0.4s ease-in-out;
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
 }
 
 .ccp-accept:hover {
-    background: #005a87;
+    background: #cf7719;
 }
 
 .ccp-decline {
-    background: #f0f0f0;
-    color: #2c3338;
-    border: 1px solid #cccccc;
+   background: #f54949;
+   color: #fff;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   transition: all 0.4s ease-in-out;
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
 }
 
 .ccp-decline:hover {
-    background: #e0e0e0;
+    background: #ee3434;
 }
 
 .ccp-terms {

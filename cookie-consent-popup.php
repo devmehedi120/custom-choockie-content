@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Cookie Consent Popup
- * Plugin URI: fiverr.com/wpdevmeedi
+ * Plugin Name: WP Cookies Plugin
+ * Plugin URI: https://kiyaya.nl/
  * Description: A customizable cookie consent popup for GDPR compliance
- * Version: 1.2.0
- * Author: Mehedi Hasan
+ * Version: 1.4.1
+ * Author: KIYAYA
  * License: GPL v2 or later
  * Text Domain: cookie-consent
  * Domain Path: /languages
@@ -23,7 +23,7 @@ define('CCP_PLUGIN_URL', plugin_dir_url(__FILE__));
 require_once CCP_PLUGIN_DIR . 'includes/admin-settings.php';
 require_once CCP_PLUGIN_DIR . 'includes/frontend-display.php';
 require_once CCP_PLUGIN_DIR . 'includes/cookie-handler.php';
-require_once CCP_PLUGIN_DIR . 'includes/coockie-translation.php';
+//require_once CCP_PLUGIN_DIR . 'includes/coockie-translation.php';
 
 
 // Initialize the plugin

@@ -37,21 +37,21 @@ class CCP_Frontend_Display {
 
         $consent = $_COOKIE['ccp_consent'] ?? '';
 
-            if ($consent === 'accepted') {
-                return false;
-            } else {
-                return true;
-            }
+            // if ($consent === 'accepted') {
+            //     return false;
+            // }elseif( $consent === 'declined') {
+            //     return false;
+            // }
 
-        // if (isset($_COOKIE['ccp_consent'])) {
-        //     return false;
-        // }
+        if (isset($_COOKIE['ccp_consent'])) {
+            return false;
+        }
         
-        // // Check if user is logged in and we should hide for admins
-        // if (is_user_logged_in() && current_user_can('manage_options')) {
-        //     // Option: You can add setting to hide for admins
-        //     return true; // Change as needed
-        // }
+        // Check if user is logged in and we should hide for admins
+        if (is_user_logged_in() && current_user_can('manage_options')) {
+            // Option: You can add setting to hide for admins
+            return true; // Change as needed
+        }
         
         return true;
     }

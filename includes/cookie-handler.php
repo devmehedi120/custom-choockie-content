@@ -20,12 +20,15 @@ class CCP_Cookie_Handler {
             // Set cookie for 30 days
             setcookie('ccp_consent', 'accepted', time() + (86400 * $expire_days), '/');
             wp_send_json_success(array('message' => 'Cookie accepted'));
-        } elseif ($consent === 'decline') {
-            // Set cookie for session only
-            setcookie('ccp_consent', 'declined', 0, '/');
-            wp_send_json_success(array('message' => 'Cookie declined'));
-        } else {
-            wp_send_json_error(array('message' => 'Invalid consent value'));
-        }
+
+            } elseif ($consent === 'decline') {
+                // Set cookie for 1 day
+                setcookie('ccp_consent', 'declined', time() + 86400, '/');
+                wp_send_json_success(array('message' => 'Cookie declined'));
+
+            } else {
+                wp_send_json_error(array('message' => 'Invalid consent value'));
+            }
+
     }
 }
